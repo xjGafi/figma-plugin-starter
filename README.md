@@ -64,6 +64,7 @@ You can get an ID by registering a new plugin on the Figma desktop app by select
 ├── src 🔫 ui
 │   ├── App.vue
 │   ├── assets
+│   │   ├── figma.png
 │   │   └── logo.png
 │   ├── components
 │   │   ├── HelloWorld.pcss
@@ -87,7 +88,7 @@ You can get an ID by registering a new plugin on the Figma desktop app by select
 # Watch files for local dev
 yarn run watch:ui
 # and
-yarn ruan watch:main
+yarn run watch:main
 
 # Build for production
 yarn run build

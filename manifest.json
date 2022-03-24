@@ -1,6 +1,6 @@
 {
-  "name": "[name]",
-  "id": "[id]",
+  "name": "figma-plugin-starter",
+  "id": "1088720990531099506",
   "api": "1.0.0",
   "main": "./dist/main/code.js",
   "editorType": ["figma"],

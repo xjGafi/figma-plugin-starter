@@ -23,41 +23,37 @@
     </select>
   </div>
 
-  <button class="button button--primary" @click="createShape">Create</button>
+  <button class="btn button button--primary" @click="createShape">Create</button>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { reactive, onMounted, onBeforeUnmount } from 'vue';
 import { selectMenu } from 'figma-plugin-ds';
-import { createShapes, getPluginMessage } from '../../figma/figma-messages';
+import { createShapes } from '../../figma/message-controller';
 
-export default {
-  setup() {
-    const create = reactive({
-      count: 5,
-      shape: 'circle',
-      direction: 'horizontal'
-    });
-    const createShape = () => {
-      createShapes(create.count, create.shape, create.direction);
-    };
-    onMounted(() => {
-      selectMenu.init();
-    });
-    onBeforeUnmount(() => {
-      selectMenu.destroy();
-    });
-    return {
-      create,
-      createShape
-    };
-  }
+const create = reactive({
+  count: 5,
+  shape: 'circle',
+  direction: 'horizontal'
+});
+const createShape = () => {
+  createShapes(create.count, create.shape, create.direction);
 };
+onMounted(() => {
+  selectMenu.init();
+});
+onBeforeUnmount(() => {
+  selectMenu.destroy();
+});
 </script>
 
-<style lang="postcss" scoped>
+<style lang="pcss" scoped>
 .option-box {
   padding: 8px;
   border-bottom: 1px solid var(--silver);
+}
+
+.btn {
+  margin: 8px auto;
 }
 </style>

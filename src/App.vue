@@ -1,33 +1,24 @@
 <template>
-  <h1 class="title">figma plugin demo</h1>
-  <hello-world class="content" />
+  <p class="title">{{ title }}</p>
+  <hello-world />
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
+import { ref } from 'vue';
+
+// This starter template is using Vue 3 <script setup> SFCs
+// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import HelloWorld from './components/HelloWorld.vue';
 
-export default {
-  components: {
-    HelloWorld
-  },
-  setup() {
-    return {};
-  }
-};
+const title = ref('hello world !');
+
 </script>
 
-<style lang="postcss" scoped>
-#app {
-  .title {
-    margin: 0;
-    padding: 16px;
-    font-size: 12px;
-    font-weight: 500;
-    border-bottom: 1px solid var(--silver);
-  }
-
-  .content {
-    padding: 8px 8px;
-  }
+<style lang="pcss" scoped>
+.title {
+  padding: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  border-bottom: 1px solid var(--silver);
 }
 </style>

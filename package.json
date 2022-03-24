@@ -7,12 +7,11 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build:ui": "vite build",
-    "watch:ui": "vite build --watch",
+    "build:ui": "vite build  --minify esbuild --emptyOutDir=false ",
     "build:main": "tsc -p ./figma/tsconfig.json",
-    "watch:main": "tsc -p ./figma/tsconfig.json --watch",
-    "prod": "vite build && tsc -p ./figma/tsconfig.json",
-    "format": "prettier --write ."
+    "build": "yarn build:ui && yarn build:main",
+    "watch:ui": "yarn build:ui --watch",
+    "watch:main": "yarn build:main --watch"
   },
   "dependencies": {
     "figma-plugin-ds": "^1.0.1",

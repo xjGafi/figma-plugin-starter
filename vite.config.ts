@@ -17,6 +17,6 @@ export default defineConfig({
         manualChunks: () => 'everything.js'
       }
     },
-    outDir: 'dist/ui'
+    outDir: './dist/ui'
   }
 });
