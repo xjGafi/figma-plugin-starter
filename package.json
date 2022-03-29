@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build:ui": "vite build  --minify esbuild --emptyOutDir=false ",
+    "build:ui": "vite build",
     "build:main": "tsc -p ./figma/tsconfig.json",
     "build": "yarn build:ui && yarn build:main",
     "watch:ui": "yarn build:ui --watch",

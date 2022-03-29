@@ -1,12 +1,12 @@
 <template>
-  <div class="option-box">
+  <div class="hello-world__option-box">
     <div class="section-title">Count:</div>
     <div class="input">
       <input v-model="create.count" type="input" class="input__field" placeholder="Placeholder" />
     </div>
   </div>
 
-  <div class="option-box">
+  <div class="hello-world__option-box">
     <div class="section-title">Shape:</div>
     <select v-model="create.shape" class="select-menu">
       <option value="square">Square</option>
@@ -15,7 +15,7 @@
     </select>
   </div>
 
-  <div class="option-box">
+  <div class="hello-world__option-box">
     <div class="section-title">Direction:</div>
     <select v-model="create.direction" class="select-menu">
       <option value="horizontal">Horizontal</option>
@@ -23,7 +23,7 @@
     </select>
   </div>
 
-  <button class="btn button button--primary" @click="createShape">Create</button>
+  <button class="hello-world__button button button--primary" @click="createShape">Create</button>
 </template>
 
 <script setup lang="ts">
@@ -47,13 +47,6 @@ onBeforeUnmount(() => {
 });
 </script>
 
-<style lang="pcss" scoped>
-.option-box {
-  padding: 8px;
-  border-bottom: 1px solid var(--silver);
-}
-
-.btn {
-  margin: 8px auto;
-}
+<style lang="pcss">
+@import './style.pcss'
 </style>
