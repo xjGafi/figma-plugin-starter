@@ -26,8 +26,8 @@ You'll need to update your `manifest.json` with your plugin's name and ID.
 
 ```json
 {
-  "name": "[name]", 🔫
-  "id": "[id]", 🔫
+  "name": "[name]", // 🔫
+  "id": "[id]", // 🔫
   "api": "1.0.0",
   "main": "./dist/main/code.js",
   "editorType": ["figma"],
@@ -47,13 +47,13 @@ You can get an ID by registering a new plugin on the Figma desktop app by select
 │   │   └── code.js
 │   └── ui
 │       ├── assets
-│       │   ├── index.f7171e2b.js
-│       │   └── style.dc2673b9.css
+│       │   ├── index.js
+│       │   └── style.css
 │       ├── favicon.ico
 │       └── index.html
 ├── figma 🔫 main
 │   ├── code.ts
-│   ├── figma-messages.ts
+│   ├── message-controller.ts
 │   └── tsconfig.json
 ├── index.html
 ├── manifest.json
@@ -67,14 +67,13 @@ You can get an ID by registering a new plugin on the Figma desktop app by select
 │   │   ├── figma.png
 │   │   └── logo.png
 │   ├── components
-│   │   ├── HelloWorld.pcss
-│   │   └── HelloWorld.vue
+│   │   ├── HelloWorld.vue
+│   │   └── style.pcss
 │   ├── env.d.ts
 │   ├── interface
 │   │   └── common.ts
 │   ├── main.ts
 │   └── style
-│       ├── index.pcss
 │       └── reset.pcss
 ├── tsconfig.json
 ├── tsconfig.node.json
