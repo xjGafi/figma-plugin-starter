@@ -85,12 +85,12 @@ You can get an ID by registering a new plugin on the Figma desktop app by select
 
 ```bash
 # Watch files for local dev
-yarn run watch:ui
+yarn watch:ui
 # and
-yarn run watch:main
+yarn watch:main
 
 # Build for production
-yarn run build
+yarn build
 ```
 
 ## Tips

@@ -23,7 +23,7 @@
     </select>
   </div>
 
-  <button class="hello-world__button button button--primary" @click="createShape">Create</button>
+  <button class="hello-world__button button button--primary" @click="handleCreateShapes">Create</button>
 </template>
 
 <script setup lang="ts">
@@ -36,7 +36,7 @@ const create = reactive({
   shape: 'circle',
   direction: 'horizontal'
 });
-const createShape = () => {
+const handleCreateShapes = () => {
   createShapes(create.count, create.shape, create.direction);
 };
 onMounted(() => {
